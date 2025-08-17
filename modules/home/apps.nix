@@ -6,5 +6,7 @@
     spotify
     jetbrains-toolbox
     vscode
+    brave
+    firefox
   ];
 }

@@ -20,6 +20,9 @@
     nodePackages.typescript
     nodePackages.pnpm
 
+    # Android Development
+    android-studio
+
     # Nix Development
     rnix-lsp
   ];
