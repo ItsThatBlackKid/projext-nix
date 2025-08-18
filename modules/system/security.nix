@@ -4,7 +4,7 @@
   services.pcscd.enable = true;
 
   # Provides udev rules for Yubikeys and related tools.
-  services.udev.packages = [ pkgs.yubikey-personalization libu2f-host ];
+  services.udev.packages = [ pkgs.yubikey-personalization ];
 
   # Critical: Add udev rule to grant user access to FIDO security keys for WebAuthn.
   # Without this, browsers cannot access the key.
