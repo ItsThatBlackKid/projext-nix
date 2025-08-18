@@ -17,7 +17,7 @@
       ENV{ID_MODEL_ID}=="a6e9",\
       ENV{ID_VENDOR_ID}=="311f",\
       ENV{ID_VENDOR}=="TrustKey",\
-      RUN+="${pkgs.systemd}/bin/loginctl lock-sessions"s
+      RUN+="${pkgs.systemd}/bin/loginctl lock-sessions"
   '';
 
   # Your other security settings
