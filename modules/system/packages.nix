@@ -7,5 +7,6 @@
     wget
     git
     google-chrome
+    sbctl
   ];
 }
