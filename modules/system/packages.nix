@@ -10,5 +10,6 @@
     sbctl
     libfido2
     usbutils
+    pam_u2f
   ];
 }
