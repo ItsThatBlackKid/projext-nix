@@ -5,27 +5,32 @@
     ./modules/system/hardware.nix
     ./modules/system/desktop.nix
     ./modules/system/packages.nix
+    ./hardware-configuration.nix
   ];
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
+
   networking.hostName = "nixos"; # Define your hostname.
   networking.networkmanager.enable = true;
 
   # Set your time zone.
-  time.timeZone = "Europe/Berlin";
+  time.timeZone = "Australia/Victoria";
 
   # Select internationalisation properties.
-  i18n.defaultLocale = "en_US.UTF-8";
+  i18n.defaultLocale = "en_AU.UTF-8";
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.saokan = {
     isNormalUser = true;
-    description = "saokan";
-    extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [];
+      description = "saokan";
+      extraGroups = [ "networkmanager" "wheel" ];
+      packages = with pkgs; [
+        kdePackages.kate
+      #  thunderbird
+    ];
   };
 
   # Allow unfree packages
@@ -37,7 +42,7 @@
   # this value at the release version of the first install of this system.
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
-  system.stateVersion = "23.11"; # Did you read the comment?
+  system.stateVersion = "25.05"; # Did you read the comment?
 
   # Enable flakes
   nix.settings.experimental-features = [ "nix-command" "flakes" ];

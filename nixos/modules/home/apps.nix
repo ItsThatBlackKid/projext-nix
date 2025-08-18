@@ -4,7 +4,6 @@
   home.packages = with pkgs; [
     # Applications
     spotify
-    jetbrains-toolbox
     vscode
     brave
     firefox

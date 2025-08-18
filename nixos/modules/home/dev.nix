@@ -8,7 +8,7 @@
     cmake
 
     # Java Development
-    jdk17
+#     jdk17
     jdk21
 
     # Flutter Development
@@ -20,10 +20,7 @@
     nodePackages.typescript
     nodePackages.pnpm
 
-    # Android Development
-    android-studio
-
-    # Nix Development
-    rnix-lsp
+    # IDE
+    jetbrains-toolbox
   ];
 }
