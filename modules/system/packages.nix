@@ -12,5 +12,7 @@
     usbutils
     pam_u2f
     nixpkgs-fmt
+    nvidia-utils
+    lib32-nvidia-utils
   ];
 }
