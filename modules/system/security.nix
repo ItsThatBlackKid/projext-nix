@@ -14,9 +14,9 @@
     KERNEL=="hidraw*", SUBSYSTEM=="hidraw", ATTRS{idVendor}=="311f", ATTRS{idProduct}=="a6e9", TAG+="uaccess"
     ACTION=="remove",\
       ENV{ID_BUS}=="usb",\
-      ENV{ID_MODEL_ID}=="0407",\
-      ENV{ID_VENDOR_ID}=="1050",\
-      ENV{ID_VENDOR}=="Yubico",\
+      ENV{ID_MODEL_ID}=="a6e9",\
+      ENV{ID_VENDOR_ID}=="311f",\
+      ENV{ID_VENDOR}=="TrustKey",\
       RUN+="${pkgs.systemd}/bin/loginctl lock-sessions"s
   '';
 
