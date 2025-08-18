@@ -8,5 +8,6 @@
     brave
     firefox
     qbittorrent
+    vlc
   ];
 }
