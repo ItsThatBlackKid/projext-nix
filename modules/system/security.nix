@@ -1,7 +1,6 @@
 {config, pkgs, ...}:
 {
   # PCSC Daemon for smart card support, used by some security keys.
-  services.pcscd.enable = true;
 
   # Provides udev rules for Yubikeys and related tools.
   services.udev.packages = [ pkgs.yubikey-personalization ];
@@ -22,10 +21,6 @@
 
   # Your other security settings
   programs.mtr.enable = true;
-  programs.gnupg.agent = {
-    enable = true;
-    enableSSHSupport = true;
-  };
   security.pam.u2f = {
     enable = true;
     control = "sufficient"; # Use "required" if you want it to be mandatory
@@ -34,6 +29,5 @@
     login.u2fAuth = true;
     sudo.u2fAuth = true;
     sddm.u2fAuth = true;
-    kwallet.u2fAuth = true; # For KDE Wallet integration
   };
 }
