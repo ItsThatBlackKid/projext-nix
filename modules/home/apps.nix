@@ -9,5 +9,6 @@
     firefox
     qbittorrent
     vlc
+    kitty
   ];
 }
