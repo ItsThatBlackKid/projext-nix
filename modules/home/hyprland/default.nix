@@ -6,7 +6,7 @@
     enable = true;
     package = null;
     portalPackage = null;
-    systemd.variables = ["--all"] 
+    systemd.variables = ["--all"];
   }
 
   # Optional, hint Electron apps to use Wayland:
