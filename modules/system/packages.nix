@@ -9,5 +9,6 @@
     google-chrome
     sbctl
     libfido2
+    usbutils
   ];
 }

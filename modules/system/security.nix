@@ -1,7 +1,21 @@
-{config, pkgs, ...}: 
+{config, pkgs, ...}:
 {
-  # services.fido-udev-rules.enable = true;
+  # PCSC Daemon for smart card support, used by some security keys.
+  services.pcscd.enable = true;
+
+  # Provides udev rules for Yubikeys and related tools.
   services.udev.packages = [ pkgs.yubikey-personalization ];
+
+  # Critical: Add udev rule to grant user access to FIDO security keys for WebAuthn.
+  # Without this, browsers cannot access the key.
+  services.udev.extraRules = ''
+    # This rule adds the "uaccess" tag, allowing the logged-in user to access the device.
+    # Replace the idVendor and idProduct with the values for your specific key.
+    KERNEL=="hidraw*", SUBSYSTEM=="hidraw", ATTRS{idVendor}=="311f", ATTRS{idProduct}=="a6e9", TAG+="uaccess"
+  '';
+
+  # Your other security settings
+  programs.mtr.enable = true;
   programs.gnupg.agent = {
     enable = true;
     enableSSHSupport = true;
