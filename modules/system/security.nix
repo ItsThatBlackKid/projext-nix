@@ -8,9 +8,6 @@
   # Critical: Add udev rule to grant user access to FIDO security keys for WebAuthn.
   # Without this, browsers cannot access the key.
   services.udev.extraRules = ''
-    # This rule adds the "uaccess" tag, allowing the logged-in user to access the device.
-    # Replace the idVendor and idProduct with the values for your specific key.
-    KERNEL=="hidraw*", SUBSYSTEM=="hidraw", ATTRS{idVendor}=="311f", ATTRS{idProduct}=="a6e9", TAG+="uaccess"
     ACTION=="remove",\
       ENV{ID_BUS}=="usb",\
       ENV{ID_MODEL_ID}=="a6e9",\
