@@ -4,7 +4,6 @@
   programs.kitty.enable = true; # required for the default Hyprland config
   wayland.windowManager.hyprland = {
     enable = true;
-    portalPackage = null;
     systemd.variables = ["--all"];
     package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
     # make sure to also set the portal package, so that they are in sync
