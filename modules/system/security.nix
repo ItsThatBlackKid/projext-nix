@@ -26,9 +26,10 @@
     enable = true;
     enableSSHSupport = true;
   };
-
-  hardware.u2f.enable = true;
-
+  security.pam.u2f = {
+    enable = true;
+    control = "required";
+  };
   security.pam.services = {
     login.u2fAuth = true;
     sudo.u2fAuth = true;
