@@ -8,5 +8,6 @@
     git
     google-chrome
     sbctl
+    libfido2
   ];
 }
