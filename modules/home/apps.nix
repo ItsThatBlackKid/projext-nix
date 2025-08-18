@@ -7,5 +7,6 @@
     vscode
     brave
     firefox
+    qbittorrent
   ];
 }
