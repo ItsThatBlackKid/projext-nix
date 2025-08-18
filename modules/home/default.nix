@@ -2,7 +2,7 @@
 
 {
   imports = [
-    ./hyprland/default.nix.nix
+    ./hyprland/default.nix
     ./apps.nix
     ./dev.nix
     ./vscode.nix
