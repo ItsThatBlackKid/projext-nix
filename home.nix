@@ -2,9 +2,7 @@
 
 {
   imports = [
-    ./modules/home/apps.nix
-    ./modules/home/dev.nix
-    ./modules/home/vscode.nix
+    ./modules/home/default.nix
   ];
 
   # Home Manager needs a bit of information about you and the paths it should
