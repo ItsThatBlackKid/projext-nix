@@ -28,7 +28,7 @@
   };
   security.pam.u2f = {
     enable = true;
-    control = "required";
+    control = "sufficient"; # Use "required" if you want it to be mandatory
   };
   security.pam.services = {
     login.u2fAuth = true;
