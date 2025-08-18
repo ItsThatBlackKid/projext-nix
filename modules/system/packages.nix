@@ -12,5 +12,6 @@
     usbutils
     pam_u2f
     nixpkgs-fmt
+    direnv
   ];
 }
