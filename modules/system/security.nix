@@ -33,5 +33,6 @@
     login.u2fAuth = true;
     sudo.u2fAuth = true;
     sddm.u2fAuth = true;
+    kwallet.u2fAuth = true; # For KDE Wallet integration
   };
 }
