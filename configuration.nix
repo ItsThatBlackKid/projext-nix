@@ -43,7 +43,6 @@
   system.stateVersion = "25.05"; # Did you read the comment?
 
   # Enable flakes
-  nix.settings.
   security.polkit.enable = true;
 
 
