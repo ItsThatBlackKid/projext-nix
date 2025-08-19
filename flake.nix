@@ -14,7 +14,13 @@
   outputs = inputs @ { self, nixpkgs, home-manager, ... }: {
     nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
-      specialArgs = {inherit inputs; }; # You can pass special arguments here
+      specialArgs = {
+        inherit inputs;
+        keyboard = {
+          layout = inputs.nixpkgs.lib.mkDefault "au"; # Set the keyboard layout
+          variant = inputs.nixpkgs.lib.mkDefault ""; # Set the keyboard variant
+        };
+       }; # You can pass special arguments here
       modules = [
         ./configuration.nix
         home-manager.nixosModules.home-manager
@@ -23,14 +29,7 @@
           home-manager.useUserPackages = true;
           home-manager.users.saokan = import ./home.nix;
           home-manager.backupFileExtension = ".bak";
-          home-manager.extraSpecialArgs = { 
-              inherit inputs;
-              keyboard = {
-                layout = inputs.nixpkgs.lib.mkDefault "au"; # Set the keyboard layout
-                variant = inputs.nixpkgs.lib.mkDefault ""; # Set the keyboard variant
-              };
-              } 
-            };
+          home-manager.extraSpecialArgs = {  inherit inputs; inherit (self.specialArgs) keyboard; };
         }
       ];
     };
