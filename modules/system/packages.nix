@@ -13,5 +13,6 @@
     pam_u2f
     nixpkgs-fmt
     direnv
+    nixfmt-rfc-style
   ];
 }

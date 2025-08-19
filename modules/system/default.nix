@@ -6,5 +6,6 @@
     ./security.nix
     ./hardware.nix
     ./desktop.nix
+    ./shell
   ];
 }

@@ -23,7 +23,14 @@
           home-manager.useUserPackages = true;
           home-manager.users.saokan = import ./home.nix;
           home-manager.backupFileExtension = ".bak";
-          home-manager.extraSpecialArgs = { inherit inputs; };
+          home-manager.extraSpecialArgs = { 
+              inherit inputs;
+              keyboard = {
+                layout = inputs.nixpkgs.lib.mkDefault "au"; # Set the keyboard layout
+                variant = inputs.nixpkgs.lib.mkDefault ""; # Set the keyboard variant
+              };
+              } 
+            };
         }
       ];
     };

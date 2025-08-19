@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ inputs, config, pkgs, ... }:
 
 {
 
@@ -16,10 +16,7 @@
   }
 
   # Configure keymap in X11
-  services.xserver.xkb = {
-    layout = "au";
-    variant = "";
-  };
+  services.xserver.xkb = inputs.keyboard;
 
   # Enable CUPS to print documents.
   services.printing.enable = true;

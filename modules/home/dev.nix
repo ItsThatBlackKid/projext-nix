@@ -20,7 +20,9 @@
     nodePackages.typescript
     nodePackages.pnpm
 
-    # IDE
-    jetbrains-toolbox
+    (pkgs.jetbrains-toolbox.override {
+      # This ensures the desktop entry is properly set up to handle the jetbrains:// protocol
+      xdg-desktop-portal-sh = true; 
+    })
   ];
 }
