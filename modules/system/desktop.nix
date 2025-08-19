@@ -1,4 +1,4 @@
-{ inputs, config, pkgs, ... }:
+{ keyboard, inputs, config, pkgs, ... }:
 
 {
 
@@ -13,10 +13,10 @@
   programs.hyprland = {
     enable = true;
     withUWSM = true; # Enable UWSM support
-  }
+  };
 
   # Configure keymap in X11
-  services.xserver.xkb = inputs.keyboard;
+  services.xserver.xkb = keyboard;
 
   # Enable CUPS to print documents.
   services.printing.enable = true;

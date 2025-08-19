@@ -1,6 +1,6 @@
-{pkgs, ...}: {
-  import = [
+ {
+  imports = [
     ./shell.nix
     ./treefmt.nix
-  ]
+  ];
 }

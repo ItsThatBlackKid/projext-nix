@@ -3,5 +3,5 @@
 {
   import = [
     ./terminal.nix
-  ]
+  ];
 }
