@@ -21,6 +21,8 @@
   i18n.defaultLocale = "en_AU.UTF-8";
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
+  programs.zsh.enable = true;
+  users.defaultUserShell = pkgs.zsh;
   users.users.saokan = {
     isNormalUser = true;
       description = "saokan";

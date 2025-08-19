@@ -2,12 +2,18 @@
 {
   programs.zsh = {
     enable = true;
-    ohMyZsh.enable = true;
-    ohMyZsh.theme = "agnoster";
-    ohMyZsh.plugins = [ "git" "zsh-autosuggestions" "zsh-syntax-highlighting" ];
-  };
-
-  programs.bash = {
-    enable = true;  
+    enableAutosuggestions = true;
+    syntaxHighlighting.enable = true;
+    oh-my-zsh = {
+      enable = true;
+      plugins = [
+        "git"
+        "docker"
+        "zsh-autosuggestions"
+        "zsh-syntax-highlighting"
+      ];
+      themes = [ "robbyrussell" ];
+    }
   }
+
 }
