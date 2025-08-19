@@ -3,7 +3,7 @@
   # PCSC Daemon for smart card support, used by some security keys.
 
   # Provides udev rules for Yubikeys and related tools.
-  services.udev.packages = [ pkgs.yubikey-personalization ];
+  services.udev.packages = [ pkgs.yubikey-personalization pkgs.libfido2 ];
 
   # Critical: Add udev rule to grant user access to FIDO security keys for WebAuthn.
   # Without this, browsers cannot access the key.
