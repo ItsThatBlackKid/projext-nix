@@ -10,7 +10,10 @@
   services.displayManager.sddm.enable = true;
   services.displayManager.sddm.wayland.enable = true;
   services.desktopManager.plasma6.enable = true;
-  programs.hyprland.enable = true;
+  programs.hyprland = {
+    enable = true;
+    withUWSM = true; # Enable UWSM support
+  }
 
   # Configure keymap in X11
   services.xserver.xkb = {
