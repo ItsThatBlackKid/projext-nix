@@ -24,6 +24,7 @@
   users.users.saokan = {
     isNormalUser = true;
       description = "saokan";
+      shell pkgs.zsh;
       extraGroups = [ "networkmanager" "wheel" ];
       packages = with pkgs; [
         kdePackages.kate
