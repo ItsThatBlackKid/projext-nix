@@ -13,7 +13,6 @@
         "zsh-syntax-highlighting"
       ];
       themes = [ "robbyrussell" ];
-    }
-  }
-
+    };
+  };
 }
