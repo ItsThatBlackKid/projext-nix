@@ -9,6 +9,8 @@
       plugins = [
         "git"
         "docker"
+        "yarn"
+        "npm"
       ];
       theme ="robbyrussell" ;
     };
