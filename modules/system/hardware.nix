@@ -1,6 +1,9 @@
 { config, lib, ... }:
 
-{
+{ 
+  # Enable NTFS support
+  boot.supportedFilesystems = [ "ntfs" ];
+
   # Kernel parameters for NVIDIA
    boot.kernelParams = [ "nvidia-drm.modeset=1" ];
 
