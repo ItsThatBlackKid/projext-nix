@@ -16,6 +16,4 @@
         package = pkgs.gnome-themes-extra;
       };
     };
-
-  
 }
