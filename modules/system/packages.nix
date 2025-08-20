@@ -14,5 +14,6 @@
     nixpkgs-fmt
     direnv
     nixfmt-rfc-style
+    rnix-lsp
   ];
 }
