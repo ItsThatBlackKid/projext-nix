@@ -1,7 +1,7 @@
 {inputs, pkgs, ...}: 
 
 {
-  import = [
+  imports = [
     ./terminal.nix
   ];
 }
