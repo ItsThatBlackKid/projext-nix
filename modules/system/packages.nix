@@ -1,6 +1,7 @@
 {  pkgs, ... }:
 
 {
+  programs.partition-manager.enable = true
   # List packages installed in system profile.
   environment.systemPackages = with pkgs; [
     vim
