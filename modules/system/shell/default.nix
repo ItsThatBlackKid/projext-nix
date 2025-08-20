@@ -1,7 +1,7 @@
-{...}:
+{ pkgs, ...}:
  {
   imports = [
-    ./shell.nix
-    ./treefmt.nix
+    ./rnix.nix {inherit pkgs; }
+    ./treefmt.nix {inherit pkgs; treefmt-nix = pkgs.treefmt-nix; }
   ];
 }
