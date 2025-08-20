@@ -6,6 +6,6 @@
     ./security.nix
     ./hardware.nix
     ./desktop.nix
-    ./qt.nix
+#    ./qt.nix
   ];
 }
