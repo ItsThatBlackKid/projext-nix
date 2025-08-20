@@ -1,4 +1,4 @@
-{config, pkgs, ...}:
+{pkgs, ...}:
 {
   # PCSC Daemon for smart card support, used by some security keys.
 

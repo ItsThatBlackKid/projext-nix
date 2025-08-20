@@ -1,4 +1,4 @@
-{ keyboard, inputs, config, pkgs, ... }:
+{ keyboard, inputs, ... }:
 
 {
 
