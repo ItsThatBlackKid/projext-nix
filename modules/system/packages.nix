@@ -6,7 +6,6 @@
     vim
     wget
     git
-    google-chrome
     sbctl
     libfido2
     usbutils
@@ -14,6 +13,5 @@
     nixpkgs-fmt
     direnv
     nixfmt-rfc-style
-    rnix-lsp
   ];
 }
