@@ -7,6 +7,6 @@
     ./vscode.nix
     ./shell
     ./hyprland
-    ./theme
+    # ./theme
   ];
 }
