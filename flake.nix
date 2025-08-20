@@ -28,6 +28,7 @@
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
           home-manager.users.saokan = import ./home.nix;
+          imports = [./modules/home/theme/qt.nix];
           home-manager.backupFileExtension = ".bak";
           home-manager.extraSpecialArgs = {  inherit inputs; inherit (self.specialArgs) keyboard; };
         }
