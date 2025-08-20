@@ -12,7 +12,7 @@
         "zsh-autosuggestions"
         "zsh-syntax-highlighting"
       ];
-      themes = [ "robbyrussell" ];
+      theme ="robbyrussell" ;
     };
   };
 }
