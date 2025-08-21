@@ -22,13 +22,14 @@
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   programs.zsh.enable = true;
+  programs.adb.enable = true;
   users.defaultUserShell = pkgs.zsh;
   users.users.saokan = {
     isNormalUser = true;
-      description = "saokan";
-      shell = pkgs.zsh;
-      extraGroups = [ "networkmanager" "wheel" ];
-      packages = with pkgs; [
+    description = "saokan";
+    shell = pkgs.zsh;
+    extraGroups = [ "networkmanager" "wheel" "kvm" "adbusers" ];
+    packages = with pkgs; [
         kdePackages.kate
       #  thunderbird
     ];
