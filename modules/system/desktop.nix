@@ -15,9 +15,9 @@
     withUWSM = true; # Enable UWSM support
   };
 
-  environment.sessionVariables = {
-    QT_QPA_PLATFORM = "xcb";
-  }
+  # environment.sessionVariables = {
+  #   QT_QPA_PLATFORM = "xcb";
+  # }
 
   # Configure keymap in X11
   services.xserver.xkb = keyboard;

@@ -1,6 +1,8 @@
 {  pkgs, ... }:
 
 {
+  services.flatpak.enable = true;
+  
   programs.partition-manager.enable = true;
 
    programs.nix-ld.enable = true;
